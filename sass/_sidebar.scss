@@ -1,0 +1,49 @@
+.sidebar {
+  background-color: $color-primary;
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width: 62.5em) {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.nav-btn {
+  border: none;
+  border-radius: none;
+  width: 4.5rem;
+  height: 3px;
+  background-color: $color-grey-light-1;
+  margin-top: 4rem;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 4.5rem;
+    height: 3px;
+    background-color: $color-grey-light-1;
+  }
+
+  &::before {
+    transform: translateY(-1.3rem);
+  }
+  &::after {
+    transform: translateY(1rem);
+  }
+
+  @media only screen and (max-width: 62.5em) {
+    margin-top: 0;
+    margin-right: 2rem;
+
+    &::before {
+      transform: translateY(-1.1rem);
+    }
+    &::after {
+      transform: translateY(0.7rem);
+    }
+  }
+}
